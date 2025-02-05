@@ -40,7 +40,7 @@ public record Order(
     }
 
     public static Order buildAcceptedOrder(Book book, int quantity) {
-        return Order.of(book.isbn(), book.title() + "-" + book.author(),
+        return Order.of(book.isbn(), book.title() + " - " + book.author(),
             book.price(), quantity, OrderStatus.ACCEPTED);
     }
 
